@@ -2,5 +2,5 @@
 
 Program by:
 Mateusz Kantyka
-Aleksandra Weso³owska
-...............
+Aleksandra Wesolowska
+£ukasz Bizek
