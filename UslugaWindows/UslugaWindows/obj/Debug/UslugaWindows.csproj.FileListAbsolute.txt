@@ -1,0 +1,8 @@
+C:\Users\luq\Desktop\UslugaWindows\UslugaWindows\bin\Debug\UslugaWindows.exe.config
+C:\Users\luq\Desktop\UslugaWindows\UslugaWindows\bin\Debug\UslugaWindows.exe
+C:\Users\luq\Desktop\UslugaWindows\UslugaWindows\bin\Debug\UslugaWindows.pdb
+C:\Users\luq\Desktop\UslugaWindows\UslugaWindows\bin\Debug\Topshelf.dll
+C:\Users\luq\Desktop\UslugaWindows\UslugaWindows\bin\Debug\Topshelf.xml
+C:\Users\luq\Desktop\UslugaWindows\UslugaWindows\obj\Debug\UslugaWindows.csprojResolveAssemblyReference.cache
+C:\Users\luq\Desktop\UslugaWindows\UslugaWindows\obj\Debug\UslugaWindows.exe
+C:\Users\luq\Desktop\UslugaWindows\UslugaWindows\obj\Debug\UslugaWindows.pdb
