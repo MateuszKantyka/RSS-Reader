@@ -1,0 +1,22 @@
+c:\users\fuger\documents\visual studio 2015\Projects\RSS_db\RSS_db\bin\Debug\RSS_db.exe.config
+c:\users\fuger\documents\visual studio 2015\Projects\RSS_db\RSS_db\bin\Debug\RSS_db.exe
+c:\users\fuger\documents\visual studio 2015\Projects\RSS_db\RSS_db\bin\Debug\RSS_db.pdb
+c:\users\fuger\documents\visual studio 2015\Projects\RSS_db\RSS_db\bin\Debug\EntityFramework.dll
+c:\users\fuger\documents\visual studio 2015\Projects\RSS_db\RSS_db\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\fuger\documents\visual studio 2015\Projects\RSS_db\RSS_db\bin\Debug\EntityFramework.xml
+c:\users\fuger\documents\visual studio 2015\Projects\RSS_db\RSS_db\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\fuger\documents\visual studio 2015\Projects\RSS_db\RSS_db\obj\Debug\RSS_db.csprojResolveAssemblyReference.cache
+c:\users\fuger\documents\visual studio 2015\Projects\RSS_db\RSS_db\obj\Debug\RSS_db.exe
+c:\users\fuger\documents\visual studio 2015\Projects\RSS_db\RSS_db\obj\Debug\RSS_db.pdb
+C:\Users\Fuger\Desktop\git\RSS-Reader\RSS_db\RSS_db\bin\Debug\RSS_db.exe.config
+C:\Users\Fuger\Desktop\git\RSS-Reader\RSS_db\RSS_db\obj\Debug\RSS_db.exe
+C:\Users\Fuger\Desktop\git\RSS-Reader\RSS_db\RSS_db\obj\Debug\RSS_db.pdb
+C:\Users\Fuger\Desktop\git\RSS-Reader\RSS_db\RSS_db\bin\Debug\RSS_db.exe
+C:\Users\Fuger\Desktop\git\RSS-Reader\RSS_db\RSS_db\bin\Debug\RSS_db.pdb
+C:\Users\Fuger\Desktop\git\RSS-Reader\RSS_db\RSS_db\bin\Debug\EntityFramework.dll
+C:\Users\Fuger\Desktop\git\RSS-Reader\RSS_db\RSS_db\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fuger\Desktop\git\RSS-Reader\RSS_db\RSS_db\bin\Debug\EntityFramework.xml
+C:\Users\Fuger\Desktop\git\RSS-Reader\RSS_db\RSS_db\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fuger\Desktop\git\RSS-Reader\RSS_db\RSS_db\obj\Debug\RSS_db.csprojResolveAssemblyReference.cache
+C:\Users\Fuger\Desktop\git\RSS-Reader\RSS_db\RSS_db\obj\Debug\RSS_db.Migrations.InitialCreate.resources
+C:\Users\Fuger\Desktop\git\RSS-Reader\RSS_db\RSS_db\obj\Debug\RSS_db.csproj.GenerateResource.Cache
