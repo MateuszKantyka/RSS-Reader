@@ -1,0 +1,68 @@
+﻿<Window x:Class="RSS2.DB"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RSS2"
+        mc:Ignorable="d"
+        Title="DB" Height="300" Width="300">
+
+
+    <StackPanel>
+
+        <TextBox Text="DataBase" Margin=" 10 40 10 10" FontWeight="Bold" TextAlignment="Center" FontSize="20"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBox Text="Refresh Time:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <ComboBox Margin=" 10 10 10 10" FontWeight="Bold" Padding="2" />
+            </StackPanel>
+        </Grid>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBox Text="Clean time:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <ComboBox Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+
+            
+
+            <StackPanel Grid.Column="1">
+                
+                <Button Margin=" 50 10 50 10" Content="Safe" FontWeight="Bold" Padding="2" />
+
+            </StackPanel>
+
+
+
+
+        </Grid>
+
+    </StackPanel>
+
+
+</Window>

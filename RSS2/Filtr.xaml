@@ -1,0 +1,72 @@
+﻿<Window x:Class="RSS2.Filtr"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RSS2"
+        mc:Ignorable="d"
+        Title="Filtr" Height="300" Width="300">
+
+
+    <StackPanel>
+
+        <TextBox Text="Default filtr" Margin=" 10 40 10 10" FontWeight="Bold" TextAlignment="Center" FontSize="20"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBox Text="Category:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <ComboBox Margin=" 10 10 10 10" FontWeight="Bold" Padding="2" />
+            </StackPanel>
+        </Grid>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBox Text="Source:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <ComboBox Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBox Text="Publ. date:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+            
+                <DatePicker Margin="10 10 10 10 "  />
+
+                <Button Margin=" 50 10 50 10" Content="Safe" FontWeight="Bold" Padding="2" />
+
+            </StackPanel>
+
+
+
+
+        </Grid>
+
+    </StackPanel>
+    
+    
+</Window>
