@@ -16,9 +16,9 @@ namespace RSS_db.Model
         [Key]
         public int Id { get; set; }
         public string BaseUrl { get; set; }
-//      public string Description { get; set; }
-//      public string ImageUrl { get; set; }
-//      public string Language { get; set; }
+        public string Description { get; set; }
+        //public string ImageUrl { get; set; }
+        public string Language { get; set; }
         public string Title { get; set; }
 
         public virtual ICollection<Item> Items { get; set; }

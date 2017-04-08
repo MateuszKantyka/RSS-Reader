@@ -15,6 +15,7 @@ namespace RSS_db
         {
             using (var db = new RAPDbContext())
             {
+                Initialization.initializationChannel();
                   db.SaveChanges();
 
                 // Wyświetlanie wszystkich kanałow jakie są w bazie 
