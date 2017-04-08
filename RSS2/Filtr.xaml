@@ -10,7 +10,8 @@
 
     <StackPanel>
 
-        <Label Text="Default filtr" Margin=" 10 40 10 10" FontWeight="Bold" TextAlignment="Center" FontSize="20"/>
+        <Label Content="Filtr" Margin=" 10 40 10 10" FontWeight="Bold" HorizontalAlignment="Center" FontSize="20"/>
+
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -19,7 +20,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0">
-                <TextBox Text="Category:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
+                <Label Content="Category:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1">
@@ -35,7 +36,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0">
-                <TextBox Text="Source:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
+                <Label Content="Source:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1">
@@ -50,7 +51,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0">
-                <TextBox Text="Publ. date:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2" />
+                <Label Content="Publ. date:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2" />
             </StackPanel>
 
             <StackPanel Grid.Column="1">

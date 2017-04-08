@@ -10,7 +10,7 @@
 
     <StackPanel>
 
-        <TextBox Text="DataBase" Margin=" 10 40 10 10" FontWeight="Bold" TextAlignment="Center" FontSize="20"/>
+        <Label Content="DataBase" Margin=" 10 40 10 10" FontWeight="Bold" HorizontalAlignment="Center" FontSize="20"/>
 
         <Grid>
             <Grid.ColumnDefinitions>
@@ -19,7 +19,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0">
-                <TextBox Text="Refresh Time:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
+                <Label Content="Refresh Time:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1">
@@ -35,7 +35,7 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0">
-                <TextBox Text="Clean time:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
+                <Label Content="Clean time:" Margin=" 10 10 10 10" FontWeight="Bold" Padding="2"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1">
