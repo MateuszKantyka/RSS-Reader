@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SimpleFeedReader</name>
+    </assembly>
+    <members>
+        <member name="T:SimpleFeedReader.DefaultFeedItemNormalizer">
+            <summary>
+            The <see cref="T:SimpleFeedReader.DefaultFeedItemNormalizer"/> normalizes <see cref="P:SimpleFeedReader.FeedItem.Title"/>, 
+            <see cref="P:SimpleFeedReader.FeedItem.Content"/> and <see cref="P:SimpleFeedReader.FeedItem.Summary"/> of <see cref="T:SimpleFeedReader.FeedItem"/>s to the point where
+            they no longer contain any HTML, redundant whitespace, un-normalized unicode chars and other control chars like
+            tabs, newlines or backspaces. The <see cref="T:SimpleFeedReader.FeedItem"/>'s <see cref="P:SimpleFeedReader.FeedItem.Date"/> property will contain
+            whichever date is latest; the PublishDate or LastUpdatedTime.
+            </summary>
+            <remarks>
+            You can implement a normalizer yourself by implementing the <see cref="T:SimpleFeedReader.IFeedItemNormalizer"/> interface.
+            </remarks>
+        </member>
+        <member name="T:SimpleFeedReader.IFeedItemNormalizer">
+            <summary>
+            Provides the base FeedItemNormalizer interface for <see cref="T:SimpleFeedReader.FeedItem"/>s.
+            </summary>
+        </member>
+        <member name="M:SimpleFeedReader.IFeedItemNormalizer.Normalize(System.ServiceModel.Syndication.SyndicationFeed,System.ServiceModel.Syndication.SyndicationItem)">
+            <summary>
+            Normalizes a <see cref="T:System.ServiceModel.Syndication.SyndicationItem"/> into a <see cref="T:SimpleFeedReader.FeedItem"/>.
+            </summary>
+            <param name="feed">The <see cref="T:System.ServiceModel.Syndication.SyndicationFeed"/> on which the item was retrieved.</param>
+            <param name="item">The <see cref="T:System.ServiceModel.Syndication.SyndicationItem"/> to normalize.</param>
+            <returns>Returns a normalized <see cref="T:SimpleFeedReader.FeedItem"/>.</returns>
+        </member>
+        <member name="M:SimpleFeedReader.DefaultFeedItemNormalizer.Normalize(System.ServiceModel.Syndication.SyndicationFeed,System.ServiceModel.Syndication.SyndicationItem)">
+            <summary>
+            Normalizes a SyndicationItem into a FeedItem.
+            </summary>
+            <param name="feed">The <see cref="T:System.ServiceModel.Syndication.SyndicationFeed"/> on which the item was retrieved.</param>
+            <param name="item">A <see cref="T:System.ServiceModel.Syndication.SyndicationItem"/> to normalize into a <see cref="T:SimpleFeedReader.FeedItem"/>.</param>
+            <returns>Returns a normalized <see cref="T:SimpleFeedReader.FeedItem"/>.</returns>
+        </member>
+        <member name="T:SimpleFeedReader.FeedItem">
+            <summary>
+            Represents an item from a <see cref="T:System.ServiceModel.Syndication.SyndicationFeed"/>.
+            </summary>
+        </member>
+        <member name="M:SimpleFeedReader.FeedItem.#ctor">
+            <summary>
+            Initializes a new <see cref="T:SimpleFeedReader.FeedItem"/>.
+            </summary>
+        </member>
+        <member name="M:SimpleFeedReader.FeedItem.#ctor(SimpleFeedReader.FeedItem)">
+            <summary>
+            Initializes a new <see cref="T:SimpleFeedReader.FeedItem"/> by copying the passed item's properties into the new instance.
+            </summary>
+            <param name="item">The <see cref="T:SimpleFeedReader.FeedItem"/> to copy.</param>
+            <remarks>This is a copy-constructor.</remarks>
+        </member>
+        <member name="M:SimpleFeedReader.FeedItem.GetContent">
+            <summary>
+            Returns content, if any, otherwise returns the summary as content.
+            </summary>
+            <returns>Returns content, if any, otherwise returns the summary as content.</returns>
+            <remarks>This method is intended as conveinience-method.</remarks>
+        </member>
+        <member name="M:SimpleFeedReader.FeedItem.GetSummary">
+            <summary>
+            Returns the summary, if any, otherwise returns the content as the summary.
+            </summary>
+            <returns>Returns the summary, if any, otherwise returns the content as the summary.</returns>
+            <remarks>This method is intended as conveinience-method.</remarks>
+        </member>
+        <member name="P:SimpleFeedReader.FeedItem.Title">
+            <summary>
+            The Title of the <see cref="T:SimpleFeedReader.FeedItem"/>.
+            </summary>
+        </member>
+        <member name="P:SimpleFeedReader.FeedItem.Content">
+            <summary>
+            The Content of the <see cref="T:SimpleFeedReader.FeedItem"/>.
+            </summary>
+        </member>
+        <member name="P:SimpleFeedReader.FeedItem.Summary">
+            <summary>
+            The Summary of the <see cref="T:SimpleFeedReader.FeedItem"/>.
+            </summary>
+        </member>
+        <member name="P:SimpleFeedReader.FeedItem.Uri">
+            <summary>
+            The Uri of the <see cref="T:SimpleFeedReader.FeedItem"/>.
+            </summary>
+        </member>
+        <member name="P:SimpleFeedReader.FeedItem.Date">
+            <summary>
+            The Date of the <see cref="T:SimpleFeedReader.FeedItem"/>.
+            </summary>
+        </member>
+        <member name="T:SimpleFeedReader.FeedReader">
+            <summary>
+            Retrieves <see cref="T:System.ServiceModel.Syndication.SyndicationFeed"/>s and normalizes the items from the feed into <see cref="T:SimpleFeedReader.FeedItem"/>s.
+            </summary>
+        </member>
+        <member name="M:SimpleFeedReader.FeedReader.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SimpleFeedReader.FeedReader"/> class.
+            </summary>
+        </member>
+        <member name="M:SimpleFeedReader.FeedReader.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SimpleFeedReader.FeedReader"/> class.
+            </summary>
+            <param name="throwOnError">
+            When true, the <see cref="T:SimpleFeedReader.FeedReader"/> will throw on errors, when false the <see cref="T:SimpleFeedReader.FeedReader"/> will 
+            suppress exceptions and return empty results.
+            </param>
+        </member>
+        <member name="M:SimpleFeedReader.FeedReader.#ctor(SimpleFeedReader.IFeedItemNormalizer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SimpleFeedReader.FeedReader"/> class.
+            </summary>
+            <param name="defaultFeedItemNormalizer">
+            The <see cref="T:SimpleFeedReader.IFeedItemNormalizer"/> to use when normalizing <see cref="T:System.ServiceModel.Syndication.SyndicationItem"/>s.
+            </param>
+        </member>
+        <member name="M:SimpleFeedReader.FeedReader.#ctor(SimpleFeedReader.IFeedItemNormalizer,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SimpleFeedReader.FeedReader"/> class.
+            </summary>
+            <param name="defaultFeedItemNormalizer">
+            The <see cref="T:SimpleFeedReader.IFeedItemNormalizer"/> to use when normalizing <see cref="T:System.ServiceModel.Syndication.SyndicationItem"/>s.
+            </param>
+            <param name="throwOnError">
+            When true, the <see cref="T:SimpleFeedReader.FeedReader"/> will throw on errors, when false the <see cref="T:SimpleFeedReader.FeedReader"/> will 
+            suppress exceptions and return empty results.
+            </param>
+        </member>
+        <member name="M:SimpleFeedReader.FeedReader.RetrieveFeeds(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Retrieves the specified feeds.
+            </summary>
+            <param name="uris">The uri's of the feeds to retrieve.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> of retrieved <see cref="T:SimpleFeedReader.FeedItem"/>s.
+            </returns>
+        </member>
+        <member name="M:SimpleFeedReader.FeedReader.RetrieveFeeds(System.Collections.Generic.IEnumerable{System.String},SimpleFeedReader.IFeedItemNormalizer)">
+            <summary>
+            Retrieves the specified feeds.
+            </summary>
+            <param name="uris">The uri's of the feeds to retrieve.</param>
+            <param name="normalizer">
+            The <see cref="T:SimpleFeedReader.IFeedItemNormalizer"/> to use when normalizing <see cref="T:SimpleFeedReader.FeedItem"/>s.
+            </param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> of retrieved <see cref="T:SimpleFeedReader.FeedItem"/>s.
+            </returns>
+        </member>
+        <member name="M:SimpleFeedReader.FeedReader.RetrieveFeed(System.String)">
+            <summary>
+            Retrieves the specified feed.
+            </summary>
+            <param name="uri">The uri of the feed to retrieve.</param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> of retrieved <see cref="T:SimpleFeedReader.FeedItem"/>s.
+            </returns>
+        </member>
+        <member name="M:SimpleFeedReader.FeedReader.RetrieveFeed(System.String,SimpleFeedReader.IFeedItemNormalizer)">
+            <summary>
+            Retrieves the specified feed.
+            </summary>
+            <param name="uri">The uri of the feed to retrieve.</param>
+            <param name="normalizer">
+            The <see cref="T:SimpleFeedReader.IFeedItemNormalizer"/> to use when normalizing <see cref="T:SimpleFeedReader.FeedItem"/>s.
+            </param>
+            <returns>
+            Returns an <see cref="T:System.Collections.Generic.IEnumerable`1"/> of retrieved <see cref="T:SimpleFeedReader.FeedItem"/>s.
+            </returns>
+        </member>
+        <member name="P:SimpleFeedReader.FeedReader.DefaultNormalizer">
+            <summary>
+            Gets the default FeedItemNormalizer the <see cref="T:SimpleFeedReader.FeedReader"/> will use when normalizing 
+            <see cref="T:System.ServiceModel.Syndication.SyndicationItem"/>s.
+            </summary>
+        </member>
+        <member name="P:SimpleFeedReader.FeedReader.ThrowOnError">
+            <summary>
+            Gets wether the FeedReader will throw on exceptions or suppress exceptions and return empty results on
+            errors.
+            </summary>
+        </member>
+    </members>
+</doc>

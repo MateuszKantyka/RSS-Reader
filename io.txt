@@ -1,0 +1,12 @@
+zaliczenie IO - laborki w pramach projektu - dokument na temat :
+
+1.specyfikacja wymagan systemowych ktory zaczyna sie diagramem przypadkow uzycia
+a) wymagania funkcjonalne np. szyfrowanie danych
+b) wymagania pozafunkcjonalne - musi system spe³niac aby dobrze dzia³aæ np. system windows, sql serwer 2012
+
+2.Architektura systemu podzia³ na sesowne kawa³ki które realizuja jakies funkcje - co z czym wspolpracuje np. interfejs uzytkownika, baza danych, usluga dzialajaca w tle, GUI
+
+3.Sprawozdanie z testow - jakie testy byly, w jaki sposób, 
+
+przedstawi w formie dokumentu tekstowego			
+

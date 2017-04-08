@@ -6,41 +6,76 @@ using System.Threading.Tasks;
 using Topshelf;
 using System.Timers;
 using System.IO;
+using Quartz;
+using Topshelf.Quartz;
+using UslugaWindows;
+
+
+
+
+//zamiast timera trzeba wykorzystac w kalsie TownCrier biblioteke quartz.net, dodać 
+//przygotowanie serwisu do zapisu feedow do bazy danych - baza microsoft sql server
+// zrobienie serwisu ktory laczy sie z url i pobiera feedy z www 
+// wyslanie danych do bazy za pomoca Entity Framework, Mateuysz robi Code First
+
 
 namespace UslugaWindows
-{
-
-    public class TownCrier
     {
-        readonly Timer _timer;
-        public TownCrier()
-        {
-            _timer = new Timer(1000) { AutoReset = true };
-            _timer.Elapsed += (sender, eventArgs) => File.AppendAllText("some.txt", string.Format("It is {0} and all is well\n", DateTime.Now));
-            //Console.WriteLine("It is {0} and all is well", DateTime.Now);
-        }
-        public void Start() { _timer.Start(); }
-        public void Stop() { _timer.Stop(); }
+
+    //Quartz
+    /*
+     static void ConfigureScheduler(ServiceConfigurator<FeedReadScheduler> svc)
+    {
+        svc.ScheduleQuartzJob(q => {
+            q.WithJob(JobBuilder.Create<FeedJob>()
+                .WithIdentity("FeedReader", "Parser")
+                .Build);
+            q.AddTrigger(() => TriggerBuilder.Create()
+                .WithCronSchedule("1/10 * * ? * MON-FRI").Build());
+        });
     }
+    */
+    
 
-    public class Program
-    {
-        public static void Main()
+
+
+    public class MyService
         {
-            HostFactory.Run(x => //1
+          
+            public void Start() {  }
+            public void Stop() { }
+        }
+
+        public class Program
+        {
+            public static void Main()
             {
-                x.Service<TownCrier>(s => //2
+                HostFactory.Run(x =>
                 {
-                    s.ConstructUsing(name => new TownCrier()); //3
-                    s.WhenStarted(tc => tc.Start()); //4
-                    s.WhenStopped(tc => tc.Stop()); //5
-                });
-                x.RunAsLocalService(); //6
+                    x.Service<MyService>(s =>
+                    {
+                        s.ConstructUsing(name => new MyService());
+                        s.WhenStarted(tc => tc.Start());
+                        s.WhenStopped(tc => tc.Stop());
 
-                x.SetDescription("Sample Topshelf Host");        //7
-                x.SetDisplayName("Stuff");                       //8
-                x.SetServiceName("Stuff");                       //9
-            });                                                  //10
+                        s.ScheduleQuartzJob(q =>
+                   q.WithJob(() =>
+                       JobBuilder.Create<FeedReadSchedule>().Build())
+                   .AddTrigger(() =>
+                       TriggerBuilder.Create()
+                           .WithSimpleSchedule(builder => builder
+                               .WithIntervalInSeconds(5)
+                               .RepeatForever())
+                           .Build())
+                    );
+                    });
+                    x.RunAsLocalService();
+
+                    x.SetDescription("Sample Topshelf Host");
+                    x.SetDisplayName("LukaszUsluga");
+                    x.SetServiceName("LukaszUsluga");
+                });
+            }
         }
     }
-}
+
