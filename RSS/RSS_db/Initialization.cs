@@ -24,10 +24,20 @@ namespace RSS_db
                     //ImageUrl = "www.sport.wp.pl/lingcos221",
                     Language = "pl",
                     Title = "WP - sport"
-    };
+                };
+
+                var wp_polityka = new Channel
+                {
+                    Id = 2,
+                    BaseUrl = "www.polityka.wp.pl/bleble/",
+                    Description = "Wiadomości polityczne z całego kraju!",
+                    //ImageUrl = "www.sport.wp.pl/lingcos221",
+                    Language = "pl",
+                    Title = "WP - polityka"
+                };
 
                 db.Channel.Add(wp_sport);
-
+                db.Channel.Add(wp_polityka);
                 db.SaveChanges();
             }
         }
