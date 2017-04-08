@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSS_db", "RSS_db\RSS_db.csproj", "{C46375B0-1E3D-4F41-AB96-AFBC291BB230}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing db", "WpfApplication1\Testing db.csproj", "{52FBEECD-FA3F-4EF5-BD95-98BBB1704731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSS2", "RSS_Wpf\RSS2.csproj", "{697D640F-FAEC-4720-BCCF-571D29B0D75F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{52FBEECD-FA3F-4EF5-BD95-98BBB1704731}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52FBEECD-FA3F-4EF5-BD95-98BBB1704731}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52FBEECD-FA3F-4EF5-BD95-98BBB1704731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{697D640F-FAEC-4720-BCCF-571D29B0D75F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{697D640F-FAEC-4720-BCCF-571D29B0D75F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{697D640F-FAEC-4720-BCCF-571D29B0D75F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{697D640F-FAEC-4720-BCCF-571D29B0D75F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

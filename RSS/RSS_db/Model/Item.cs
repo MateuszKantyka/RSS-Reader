@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,8 +9,6 @@ namespace RSS_db.Model
 {
     class Item
     {
-        class Item
-        {
             [Key]
             public int Id { get; set; }
             public string Title { get; set; }
@@ -22,6 +21,5 @@ namespace RSS_db.Model
             public string ExternalGuid { get; set; }
 
             public virtual Channel Channel { get; set; }
-        }
     }
 }
