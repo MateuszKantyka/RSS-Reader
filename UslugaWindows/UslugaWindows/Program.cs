@@ -21,24 +21,7 @@ using UslugaWindows;
 
 namespace UslugaWindows
     {
-
-    //Quartz
-    /*
-     static void ConfigureScheduler(ServiceConfigurator<FeedReadScheduler> svc)
-    {
-        svc.ScheduleQuartzJob(q => {
-            q.WithJob(JobBuilder.Create<FeedJob>()
-                .WithIdentity("FeedReader", "Parser")
-                .Build);
-            q.AddTrigger(() => TriggerBuilder.Create()
-                .WithCronSchedule("1/10 * * ? * MON-FRI").Build());
-        });
-    }
-    */
-    
-
-
-
+      
     public class MyService
         {
           

@@ -43,9 +43,9 @@ namespace UslugaWindows
 
         private Channel createOrFindChannel()
         {
-            var channel = channelRepository.Channel.FirstOrDefault(x => x.BaseUrl == _feedUrl);
+            var channel = channelRepository.Channel.FirstOrDefault(x => x.BaseUrl == _feedUrl);   
 
-            if (channel == null)
+            if (channel == null)             // funkcja pobierająca kanał i wysyłająca do bazy
             {
                 channel = new Channel
                 {

@@ -22,3 +22,6 @@ C:\Users\luq\Desktop\UslugaWindows\UslugaWindows\bin\Debug\MongoDB.Bson.xml
 C:\Users\luq\Desktop\UslugaWindows\UslugaWindows\bin\Debug\MongoDB.Driver.xml
 C:\Users\luq\Desktop\UslugaWindows\UslugaWindows\bin\Debug\MongoDB.Driver.Core.xml
 C:\Users\luq\Desktop\UslugaWindows\UslugaWindows\bin\Debug\SimpleFeedReader.xml
+C:\Users\luq\RSS-Reader\UslugaWindows\UslugaWindows\bin\Debug\UslugaWindows.exe.config
+C:\Users\luq\RSS-Reader\UslugaWindows\UslugaWindows\obj\Debug\UslugaWindows.exe
+C:\Users\luq\RSS-Reader\UslugaWindows\UslugaWindows\obj\Debug\UslugaWindows.pdb
