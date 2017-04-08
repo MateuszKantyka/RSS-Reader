@@ -10,7 +10,7 @@
 
     <StackPanel>
 
-        <TextBox Text="Default filtr" Margin=" 10 40 10 10" FontWeight="Bold" TextAlignment="Center" FontSize="20"/>
+        <Label Text="Default filtr" Margin=" 10 40 10 10" FontWeight="Bold" TextAlignment="Center" FontSize="20"/>
 
         <Grid>
             <Grid.ColumnDefinitions>
