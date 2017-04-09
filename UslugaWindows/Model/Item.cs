@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UslugaWindows.Model
+namespace Model.DbModel
 {
-    class Item
+    public class Item
     {
         [Key]
         public int Id { get; set; }

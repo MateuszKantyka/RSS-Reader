@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RSS_db.Model;
+using Model.DbModel;
 namespace RSS_db
 {
     public static class Initialization

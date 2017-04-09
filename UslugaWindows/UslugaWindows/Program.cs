@@ -25,8 +25,8 @@ namespace UslugaWindows
     public class MyService
         {
           
-            public void Start() {  }
-            public void Stop() { }
+            public void Start() {  }  // odpalenie usługi
+            public void Stop() { }      // zamkniecie usługi
         }
 
         public class Program
@@ -37,7 +37,7 @@ namespace UslugaWindows
                 {
                     x.Service<MyService>(s =>
                     {
-                        s.ConstructUsing(name => new MyService());
+                        s.ConstructUsing(name => new MyService());  
                         s.WhenStarted(tc => tc.Start());
                         s.WhenStopped(tc => tc.Stop());
 
@@ -46,7 +46,7 @@ namespace UslugaWindows
                        JobBuilder.Create<FeedReadSchedule>().Build())
                    .AddTrigger(() =>
                        TriggerBuilder.Create()
-                           .WithSimpleSchedule(builder => builder
+                           .WithSimpleSchedule(builder => builder // konfig quiartza ktory uruchami feedreadschedulera co 5 sek.
                                .WithIntervalInSeconds(5)
                                .RepeatForever())
                            .Build())
@@ -54,9 +54,9 @@ namespace UslugaWindows
                     });
                     x.RunAsLocalService();
 
-                    x.SetDescription("Sample Topshelf Host");
+                    x.SetDescription("Sample Topshelf Host");  // nazwa usługi
                     x.SetDisplayName("LukaszUsluga");
-                    x.SetServiceName("LukaszUsluga");
+                    x.SetServiceName("LukaszUsluga"); //nazwa usługi
                 });
             }
         }

@@ -101,11 +101,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBcontext.cs" />
     <Compile Include="FeedReader.cs" />
     <Compile Include="FeedReadScheduler.cs" />
-    <Compile Include="Model\Channel.cs" />
-    <Compile Include="Model\Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -116,6 +113,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\RSS-Reader\RSS\RSS_db\RSS_db.csproj">
+      <Project>{c46375b0-1e3d-4f41-ab96-afbc291bb230}</Project>
+      <Name>RSS_db</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{d5059047-73a5-41d9-a3c0-d81c00e03dd4}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

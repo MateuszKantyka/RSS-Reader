@@ -25,3 +25,6 @@ C:\Users\Fuger\Desktop\git\RSS-Reader\RSS\WpfApplication1\obj\Debug\WpfApplicati
 C:\Users\mateu\Desktop\RSS-Reader\RSS\WpfApplication1\bin\Debug\WpfApplication1.exe.config
 C:\Users\mateu\Desktop\RSS-Reader\RSS\WpfApplication1\obj\Debug\WpfApplication1.exe
 C:\Users\mateu\Desktop\RSS-Reader\RSS\WpfApplication1\obj\Debug\WpfApplication1.pdb
+C:\Users\luq\RSS-Reader\RSS\WpfApplication1\bin\Debug\WpfApplication1.exe.config
+C:\Users\luq\RSS-Reader\RSS\WpfApplication1\obj\Debug\WpfApplication1.exe
+C:\Users\luq\RSS-Reader\RSS\WpfApplication1\obj\Debug\WpfApplication1.pdb

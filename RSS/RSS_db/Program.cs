@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using RSS_db.Model;
+using Model.DbModel;
 
 namespace RSS_db
 {
@@ -15,7 +15,7 @@ namespace RSS_db
         {
             using (var db = new RAPDbContext())
             {
-                Initialization.initializationChannel();
+               // Initialization.initializationChannel();
                   db.SaveChanges();
 
                 // Wyświetlanie wszystkich kanałow jakie są w bazie 

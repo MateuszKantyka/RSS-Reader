@@ -1,0 +1,4 @@
+C:\Users\luq\Desktop\UslugaWindows\Model\bin\Debug\Model.dll
+C:\Users\luq\Desktop\UslugaWindows\Model\bin\Debug\Model.pdb
+C:\Users\luq\Desktop\UslugaWindows\Model\obj\Debug\Model.dll
+C:\Users\luq\Desktop\UslugaWindows\Model\obj\Debug\Model.pdb

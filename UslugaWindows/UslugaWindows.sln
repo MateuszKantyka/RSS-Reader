@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UslugaWindows", "UslugaWindows\UslugaWindows.csproj", "{4A18301C-9928-4F63-B405-F455D7983C9D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5873E399-D0A7-4B4E-970F-FA074DEBB055}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSS_db", "..\..\RSS-Reader\RSS\RSS_db\RSS_db.csproj", "{C46375B0-1E3D-4F41-AB96-AFBC291BB230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{D5059047-73A5-41D9-A3C0-D81C00E03DD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,14 @@ Global
 		{4A18301C-9928-4F63-B405-F455D7983C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A18301C-9928-4F63-B405-F455D7983C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A18301C-9928-4F63-B405-F455D7983C9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C46375B0-1E3D-4F41-AB96-AFBC291BB230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C46375B0-1E3D-4F41-AB96-AFBC291BB230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C46375B0-1E3D-4F41-AB96-AFBC291BB230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C46375B0-1E3D-4F41-AB96-AFBC291BB230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5059047-73A5-41D9-A3C0-D81C00E03DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5059047-73A5-41D9-A3C0-D81C00E03DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5059047-73A5-41D9-A3C0-D81C00E03DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5059047-73A5-41D9-A3C0-D81C00E03DD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

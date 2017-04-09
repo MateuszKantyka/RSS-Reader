@@ -52,15 +52,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChannelRepository.cs" />
     <Compile Include="Initialization.cs" />
-    <Compile Include="Model\Channel.cs" />
-    <Compile Include="Model\Item.cs" />
+    <Compile Include="ItemRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Desktop\UslugaWindows\Model\Model.csproj">
+      <Project>{d5059047-73a5-41d9-a3c0-d81c00e03dd4}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
